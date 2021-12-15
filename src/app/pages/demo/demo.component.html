@@ -1,0 +1,126 @@
+<div class="site-page-header-ghost-wrapper page-header">
+    <nz-page-header [nzGhost]="false">
+        <nz-page-header-title>Candidate : Akshar Soni</nz-page-header-title>
+        <!-- <nz-page-header-subtitle>This project is build with AntDesign</nz-page-header-subtitle> -->
+        <!-- <nz-page-header-extra>
+            <button nz-button nzType="primary">Add User</button>
+        </nz-page-header-extra> -->
+        <nz-page-header-content>
+        </nz-page-header-content>
+    </nz-page-header>
+</div>
+
+<div class="user-page">
+    <button nz-button (click)="showModalMiddle()" nzType="primary">Add</button>
+    <br />
+    <br />
+    <nz-table #editRowTable nzBordered [nzData]="listOfData">
+        <thead>
+            <tr>
+                <th nzWidth="30%">Name</th>
+                <th nzWidth="100px">Age</th>
+                <th>Phone</th>
+                <th>NewsLetter</th>
+                <th nzWidth="300px">Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of listOfData" class="editable-row">
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.name }}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.name"
+                        (blur)="stopEdit()" />
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.age }}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="number" nz-input [(ngModel)]="data.age"
+                        (blur)="stopEdit()" />
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.phone }}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="number" nz-input [(ngModel)]="data.phone"
+                        (blur)="stopEdit()" />
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.newsletter?"YES":"NO" }}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="checkbox" nz-input [(ngModel)]="data.newsletter"
+                        (blur)="stopEdit()" />
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.gender}}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="radio" nz-input [(ngModel)]="data.gender"
+                        (blur)="stopEdit()" value="M" class="label-m" />
+                    <label [hidden]="editId !== data.id" style="padding-left: 4px;">Male</label>
+                    <input [hidden]="editId !== data.id" type="radio" nz-input [(ngModel)]="data.gender"
+                        (blur)="stopEdit()" value="F" class="label-f" />
+                    <label [hidden]="editId !== data.id" style="padding-left: 4px;">Female</label>
+                </td>
+                <td>
+                    <a nz-popconfirm nzPopconfirmTitle="Sure to delete?" (nzOnConfirm)="deleteRow(data.id)">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</div>
+<nz-modal [(nzVisible)]="isVisibleMiddle" nzTitle="Add User" nzCentered (nzOnCancel)="handleCancelMiddle()"
+    (nzOnOk)="handleOkMiddle()">
+    <ng-container *nzModalContent>
+        <form nz-form [formGroup]="userForm" (ngSubmit)="submitForm()">
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="Name" nzRequired nzTooltipTitle="Please enter full name">
+                    <span>Name</span>
+                </nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input name!">
+                    <input type="text" nz-input id="nickname" formControlName="Name" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="Age" nzRequired
+                    nzTooltipTitle="minimum 1 digit maximum 3 digit">
+                    <span>Age</span>
+                </nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input age!">
+                    <input type="number" nz-input id="nickname" formControlName="Age" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="PhoneNumber" nzRequired
+                    nzErrorTip="Please input phone number!">Phone Number</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" [nzValidateStatus]="userForm.controls['PhoneNumber']"
+                    nzErrorTip="Please input your phone number!">
+                    <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+                        <input type="number" formControlName="PhoneNumber" id="'PhoneNumber'" nz-input />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nz-row class="register-area">
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="PhoneNumber" nzRequired>News Letter</nz-form-label>
+                <nz-form-control [nzSm]="6" [nzXs]="24">
+                    <label nz-checkbox formControlName="Newsletter">
+                    </label>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nz-row class="register-area">
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="PhoneNumber" nzRequired
+                    nzErrorTip="Please select your gender!">Gender</nz-form-label>
+                <nz-form-control [nzSm]="6" [nzXs]="24">
+                    <nz-radio-group formControlName="Gender" [(ngModel)]="radioValue">
+                        <label nz-radio nzValue="M" checked="checked">Male</label>
+                        <label nz-radio nzValue="F">Female</label>
+                    </nz-radio-group>
+                </nz-form-control>
+            </nz-form-item>
+        </form>
+    </ng-container>
+</nz-modal>

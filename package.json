@@ -19,6 +19,13 @@
     "@angular/platform-browser": "~11.2.5",
     "@angular/platform-browser-dynamic": "~11.2.5",
     "@angular/router": "~11.2.5",
+    "@ng-bootstrap/ng-bootstrap": "^4.0.1",
+    "@ngx-pwa/local-storage": "^7.2.1",
+    "angular2-ladda": "^2.0.0",
+    "angular2-moment": "^1.9.0",
+    "ng-zorro-antd": "^11.4.2",
+    "ngx-bootstrap": "^5.6.1",
+    "ngx-toastr": "^9.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
