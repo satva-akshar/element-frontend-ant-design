@@ -14,7 +14,7 @@ import { map, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { ResponseStatus } from '../@shared/enum';
 
-@Injectable()
+// @Injectable()
 export class HttpConfigInterceptor implements HttpInterceptor {
     constructor(private router: Router, private message: NzMessageService) { }
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

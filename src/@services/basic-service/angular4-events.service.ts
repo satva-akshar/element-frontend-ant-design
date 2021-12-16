@@ -3,7 +3,7 @@ import { Subject, Observable, Subscription } from 'rxjs';
 
 const ServiceName: string = "Events Service";
 
-@Injectable()
+// @Injectable()
 export class EventsService implements IEventsService {
 	private events = {};
 

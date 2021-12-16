@@ -1,0 +1,80 @@
+<!-- <div class="main-box">
+    <div class="login-main-box">
+        <div class="left-box">
+            <div class="logo-box">
+                <img class="img-fluid" src="./assets/images/white-logo.png" class="img-fluid">
+            </div>
+        </div>
+        <div class="right-form-box">
+            <div class="form-box">
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <div class="color-logo-box">
+                            <img class="img-fluid" src="./assets/images/elements-p2p-logo.png">
+                        </div>
+                        <h1 class="title-text">Login</h1>
+                    </div>
+                    <form class="row" [formGroup]="loginForm" novalidate="">
+                        <div class="input-field input-box col s12 m12 l12 xl12">
+                            <input id="Email or Phone Number" type="text" class="validate form-input" 
+                                formControlName="userName" autocomplete="off" >
+                            <label for="Email or Phone Number" class="form-label">Email or Phone Number</label>
+                            <div *ngIf="loginForm.controls['userName'].invalid && loginForm.controls['userName'].touched"
+                                class="text-danger">
+                                <div *ngIf="loginForm.controls['userName'].errors.required">
+                                    Email or Phone is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-field input-box col s12 m12 l12 xl12 password">
+                            <input id="Password" [type]="pwdType"  formControlName="password" class="validate form-input password-input" autocomplete="off">
+                            <label for="Password" class="form-label">Password</label>
+                            <a href="javascript:void(0)" (mousedown)="togglePassword()" (mouseup)="togglePassword()"
+                                    class="password-icon">
+                                    <img src="./assets/images/eye-icon.png">
+                                </a>
+                                <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+                                    class="text-danger">
+                                    <div *ngIf="loginForm.controls['password'].errors.required">
+                                        Password is required.
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col s12 m12 l12 xl12">
+                            <button class="btn waves-effect waves-light forgot-password-text" type="submit"
+                                name="action">Forgot password?
+                            </button>
+                        </div>
+                        <div class="col s12 m12 l12 xl12">
+                            <button class="btn waves-effect waves-light button-link fw-500" (click)="login()">Log
+                                in</button>
+                        </div>
+                        <div class="col s12 m12 l12 xl12">
+                            <div class="or-log-box">
+                                <p class="or-log-in-text text-center fw-500">OR LOG IN WITH </p>
+                            </div>
+                            <div class="log-in-with-box">
+                                <ul>
+                                    <li><a href="javascript:void(0)"><img class="img-fluid" src="./assets/images/gmail-img.png"></a></li>
+                                    <li><a href="javascript:void(0)"><img class="img-fluid" src="./assets/images/microsoft-img.png"></a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"><img class="img-fluid" src="./assets/images/office-img.png"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="account-box">
+                                <p class="text-center">Want to Create New Account?
+                                    <a href="javascript:void(0)"
+                                        class="btn fw-500 with-out-bg-link" (click)="signUp()"> Sign Up</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<p>
+    login Works!
+</p>

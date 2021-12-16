@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Group_5340" data-name="Group 5340" transform="translate(-76 -221)">
+    <g id="Component_163_1" data-name="Component 163 – 1" transform="translate(76 221)">
+      <g id="Group_5385" data-name="Group 5385" transform="translate(-76 -221)">
+        <g id="Group_5326" data-name="Group 5326" transform="translate(64 65)">
+          <path id="Path_5681" data-name="Path 5681" d="M9,0A9,9,0,1,1,0,9,9,9,0,0,1,9,0Z" transform="translate(15 159)" fill="#ecf5fc"/>
+          <path id="Union_139" data-name="Union 139" d="M-2143.324-1328.8a.829.829,0,0,1-.829-.829v-4.744a.821.821,0,0,1,.239-.585l3.043-3.042.417.414a.6.6,0,0,1,.175.408l-.012.139-.48,2.311h3.138a.831.831,0,0,1,.83.831v.948a.794.794,0,0,1-.058.3l-1.432,3.345a.823.823,0,0,1-.764.505Zm-.119-5.621v4.911h4.466l1.463-3.439v-1.068h-4.235l.7-2.8ZM-2147-1328.8v-5.454h1.659v5.454Z" transform="translate(2166 1501)" fill="#1c88e1" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+        <circle id="Ellipse_625" data-name="Ellipse 625" cx="3" cy="3" r="3" transform="translate(91 224)" fill="red"/>
+      </g>
+      <rect id="Rectangle_4821" data-name="Rectangle 4821" width="25" height="25" fill="none" opacity="0.5"/>
+    </g>
+  </g>
+</svg>
