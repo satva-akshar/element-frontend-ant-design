@@ -1,0 +1,160 @@
+/* 
+.text-danger{
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  position: absolute;
+  line-height: 15px;
+  padding: 3px 0;
+} */
+/* .text-danger{
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  line-height: 15px;
+  padding: 2px 2px;
+} */
+.c-input {
+  display: block;
+  width: 97% !important;
+  border: 1px solid #ccc !important;
+  height: auto !important;
+  padding: 5px 10px !important;
+  margin: 10px !important;
+  box-sizing: inherit  !important;
+  border-radius: 5px !important;
+} 
+.c-input:focus {
+  box-shadow: none !important;
+ 
+}
+#searchIcon {
+  display: none;
+}
+
+.list-filter {
+  padding-left: 0 !important;
+}
+ .dropdown-list {
+  padding-top: 0 !important;
+}
+ .arrow-up {
+  display: none;
+}
+.single-select-mode .pure-checkbox input[type="checkbox"] + label:before{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #7D8C9A !important;
+    border-radius: 3px !important;
+}
+.list-filter {
+  height: auto !important;
+}
+/*---------------*/
+.text-danger{
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  line-height: 15px;
+  padding: 2px 1px;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+top: -13px;
+bottom: 10px;
+left: 20px;
+font-size: 11px;
+opacity: 1;
+}
+
+.inputText {
+font-size: 14px;
+width: 200px;
+height: 35px;
+}
+
+.floating-label {
+position: absolute;
+pointer-events: none;
+left: 20px;
+top: 18px;
+transition: 0.2s ease all;
+}
+.c-input {
+  display: block;
+  width: 94% !important;
+  border: 1px solid #ccc !important;
+  height: auto !important;
+  padding: 5px 10px !important;
+  margin: 10px !important;
+  box-sizing: inherit  !important;
+  border-radius: 5px !important;
+} 
+.c-input:focus {
+  box-shadow: none !important;
+ 
+}
+#searchIcon {
+  display: none;
+}
+
+.list-filter {
+  padding-left: 0 !important;
+}
+.select-dropdown-main-box .dropdown-list {
+  padding-top: 0 !important;
+}
+.select-dropdown-main-box .arrow-up {
+  display: none;
+}
+.single-select-mode .pure-checkbox input[type="checkbox"] + label:before{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #7D8C9A !important;
+    border-radius: 3px !important;
+}
+.list-filter {
+  height: auto !important;
+}
+/*---------------*/
+/* .text-danger{
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  line-height: 15px;
+  padding: 3px 0;
+} */
+.table-danger-text {
+  line-height: 12px;
+  padding: 0;
+  font-size: 10px;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+top: -13px;
+bottom: 10px;
+left: 20px;
+font-size: 11px;
+opacity: 1;
+}
+
+.inputText {
+font-size: 14px;
+width: 200px;
+height: 35px;
+}
+
+.floating-label {
+position: absolute;
+pointer-events: none;
+left: 20px;
+top: 18px;
+transition: 0.2s ease all;
+}
+/*-------------------*/
+.swal2-container{
+  z-index: 99999 !important;
+}
+.header-text,.header-text:hover{
+  color: black;
+}
+/* .full-width{
+  margin-top: 3px !important;
+} */
